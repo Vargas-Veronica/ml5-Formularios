@@ -19,11 +19,13 @@
   }
   
  * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: var(--fuente);
  }
 
+ 
  a {
     color: black;
     text-decoration: none;    
@@ -56,8 +58,8 @@ header div.logo{
 
 header div.busqueda {
     margin-left: 15px;
-    width: 170px;
-    margin-bottom: 9px;
+    width: 250px;
+    margin-bottom: 10px;
 }
 
 header p{    
@@ -65,6 +67,9 @@ header p{
     margin-bottom: 15px;
 }
 
+header nav {
+    display: none;
+}
 
 header nav ul.lista-superior {
     margin-bottom: 15px;
@@ -79,16 +84,68 @@ header div.burger-menu {
     background-color: var(--celeste);
     border-radius: 5px;
     color: white;
-    width: 17px;
+    width: 30px;
     padding: 7px;
     margin: 25px auto 0;
-    /* top right-left bottom */
-    /* top right bottom left */
-    /* 0 15px 5px 7px */
+
 }
 
 
 /*secciones*/ 
+main {
+   /* justify-content: center;
+    text-align: center;*/
+    margin: auto;
+    width: 90vw;
+ }
+
+ main section h4 {
+    font-size: var(--titulos);
+    color: var(--gris-oscuro);
+    margin-bottom: 20px;
+}
+
+ article {
+    margin: 10px 0px;
+
+ }
+
+ main section article div {
+    border-top: 1px solid var(--gris-claro);
+    padding: 15px;
+ }
+
+ main section article p.precio {
+    font-size: var(--precio);
+}
+
+ main section article p.descuento {
+    font-size: var(--descuento);
+    color: var(--verde);
+    padding-bottom: 15px;
+ }
+ main section article h5 {
+    display: none;
+}
+
+ main section article div div.camion {
+    width: 1.2em;
+    height: 1.2em;
+    color: var(--verde);
+    border: 1px solid var(--verde);
+    border-radius: 50%;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+main section article p.descuento {
+    font-size: var(--descuento);
+    color: var(--verde);
+    padding-bottom: 15px;
+}
+
+
+
 /*producto*/
 
 footer {
@@ -108,3 +165,23 @@ footer article i {
    margin-bottom: 10px;
    
 }
+
+@media (min-width: 361px) {
+    header div.burger-menu {
+        display: none;
+  }
+  header nav {
+        display: block;
+  }
+  main section article h5 {
+        display: inline;
+        font-size: var(--descripcion);
+        color: var(--gris-oscuro);
+  }
+  main section article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+}
+
+
+
